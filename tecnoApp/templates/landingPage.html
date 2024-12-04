@@ -1,0 +1,133 @@
+{% extends 'base.html' %}
+
+{% block titulo %} Landing Page - TecnoBombas {% endblock %}
+
+{% load static %}
+
+{% block conteudo %}
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-mother">
+                <div class="header-img">
+                    <img src="{% static 'images/TECNO.png' %}" alt="logo tecnobombas">
+                </div>
+                <div class="logo">
+                    <h1>Tecno<span>Bombas</span></h1>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="store-content">Loja</a></li>
+                    <li><a href="support-options">Suporte</a></li>
+                    <li><a href="{% url 'fazerLogin' %}" class="login-btn">Login</a></li>
+                    <li><a href="{% url 'criarLogin' %}" class="login-btn">Cadastro</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Serviços Hidráulicos -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-text">
+                <h2>Serviços Hidráulicos</h2>
+                <p>Descubra a Solução Ideal para suas demandas com TecnoBombas! Nossa plataforma inovadora oferece tudo o que você precisa para gerenciar e adquirir equipamentos hidráulicos com total praticidade e segurança. Se você está buscando otimizar a gestão de seus equipamentos ou deseja explorar uma vasta gama de produtos com facilidade, temos as ferramentas e o suporte perfeitos para você.</p>
+                <a href="{% url 'fazerLogin' %}" class="btn">Orçamento</a>
+            </div>
+
+            <div class="hero-image">
+                <img src="{% static 'images/poolwater.png' %}" alt="Serviços Hidráulicos">
+            </div>
+            
+        </div>
+        
+    </section>
+
+    <!-- Afilie-se Section -->
+    <section class="affiliate">
+        <div class="container">
+            <h2>Afilie-se</h2>
+            <div class="affiliate-options">
+                <div class="affiliate-item">
+                    <a href="{% url 'fazerLogin' %}"><img src="{% static 'images/equipamentos.png' %}" alt="Bombas Hidráulicas Ilustrativas" class="image-animated"></a>
+                    <h3>Cadastre seus Equipamentos</h3>
+                    <p>Informe as especificações e anexe as fotos dos seus equipamentos, vinculando-os ao seu perfil.</p>
+                </div>
+                <div class="affiliate-item">
+                    <a href="{% url 'fazerLogin' %}"><img src="{% static 'images/perfil.png' %}" alt="Pessoa usando o Notebook" class="image-animated"></a>
+                    <h3>Gerencie seu Perfil</h3>
+                    <p>Atualize suas fotos, equipamentos, endereços e cadastre formas de pagamento quando quiser.</p>
+                </div>
+                <div class="affiliate-item">
+                    <a href="{% url 'fazerLogin' %}"><img src="{% static 'images/atendimentos.png' %}" alt="Funcionário realizando atendimento" class="image-animated"></a>
+                    <h3>Solicite Atendimentos</h3>
+                    <p>Atendimentos presenciais, opção disponível em horário comercial e, para contratantes, 24h por dia.</p>
+                </div>
+            </div>
+        
+        </div>
+    </section>
+
+    <!-- Loja Virtual Section -->
+    <section class="store">
+        <div class="container">
+            <div class="store-content">
+                <h2>Loja Virtual</h2>
+                <h3>Diversificada</h3>
+                <p>Navegue por uma ampla lista de equipamentos hidráulicos novos e seminovos.</p>
+                <h3>Simples</h3>
+                <p>Filtros de pesquisa, diversas formas de pagamento, predefinição de endereço de entrega e carrinho de compras virtual tornam o processo compra muito mais simples e eficiente.</p>
+                <h3>Segura</h3>
+                <p>Todos seus dados criptografados e transações autenticadas pelo PayPal fazem com que o produto chegue até você de maneira segura.</p>
+                <div class="btn-container">
+                    <a href="#" class="btn1">Comprar</a>
+                    <a href="#" class="btn2">Produtos</a>
+                </div>
+            </div>
+
+            <div class="store-image-container">
+                <div class="store-image">
+                    <img src="{% static 'images/loja.png' %}" alt="Imagem demonstrativa de compras">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Suporte Section -->
+    <section class="support">
+        <div class="container">
+            <h2>Suporte</h2>
+            <div class="support-options">
+                <div class="support-item">
+                    <h3>Atendimento</h3>
+                    <a href="{% url 'fazerLogin' %}"><img src="{% static 'images/chatbot.png' %}" alt="Imagem demonstrativa de compras" class="image-animated"></a>
+                    <p>Envie e receba mensagens de uma IA que o auxiliará com dúvidas em relação ao site ou problemas relacionados há algum equipamento.</p>
+                </div>
+                <div class="support-item">
+                    <h3>Tutoriais</h3>
+                    <a href="{% url 'fazerLogin' %}"><img src="{% static 'images/tutoriais.png' %}" alt="Imagem demonstrativa de compras" class="image-animated"></a>
+                    <p>Descubra nossos tutoriais passo a passo para facilitar a instalação de equipamentos hidráulicos, com vídeos e dicas para profissionais e iniciantes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Register Section -->
+    <section class="register">
+        <div class="container">
+                <ul>
+                    <li><h2>Crie seu perfil.</h2></li>
+                    <li><h2 class="tecno">Aproveite os benefícios.</h2></li>
+                </ul>
+                <div class="btn-container">
+                    <a href="#" class="btn1">Login</a>
+                    <a href="#" class="btn2">Registrar</a>
+                </div>
+        </div>
+    </section>
+
+{% endblock %}
+</html>

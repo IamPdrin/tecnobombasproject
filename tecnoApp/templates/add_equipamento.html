@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_styles %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+{% endblock %}
+
+{% block titulo %} Cadastro de Equipamentos {% endblock %}
+
+{% block conteudo %}
+<main>
+    <div class="container-body">
+        <div class="container-card">
+            <div class="body-card">
+                <h4>Cadastro do Equipamento</h4>
+                <hr>
+                
+                <form action="{% url 'add_equipamento'%}" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    
+                    <div class="input-group">
+                        <input type="text" id="categoria" name="categoria" placeholder="Categoria:">
+                    </div>
+
+                    <div class="input-group">
+                        <input type="text" id="nome" name="nome" placeholder="Nome:">
+                    </div>
+
+                    <div class="input-group">
+                        <textarea id="especificacao" name="especificacoes" placeholder="Especificações:" rows="5" cols="34"></textarea>
+                    </div>
+
+                    <div class="bt-and-text">
+                        <button type="submit" class="btphoto" onclick="document.getElementById('foto_input').click()">
+                            <img src="{% static 'images/addimg.png' %}" alt="icone check" class="icon">
+                        </button>
+                        <a href="#" onclick="document.getElementById('foto_input').click(); return false;">Adicionar Imagem do produto</a>
+                    </div>
+
+                    <input type="file" id="foto_input" name="foto" accept="image/*" style="display: none;">
+                    <br>
+                    <button type="submit" class="bt">Cadastrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

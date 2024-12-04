@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_styles %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+{% endblock %}
+
+{% block titulo %} Seleção do Tipo do Documento {% endblock %}
+
+{% block conteudo %}
+
+<main>
+    <div class="center-container">
+        <div class="container-card">
+
+            <div class="img-card">
+                <img src="{% static 'images/logo.png' %}" alt="Logo TecnoBombas">
+            </div>
+
+            <div class="body-card">
+                <h2>Cadastro de Documentos</h2>
+                <hr>
+                <div class="item-group">
+                    <div class="item-group option">
+                        <div class="circle item">
+                            <a href="https://www.nfse.gov.br/EmissorNacional/Login?ReturnUrl=%2fEmissorNacional%2fDPS%2fPessoas" target="_blank"><img src="{% static 'images/notafiscal.png' %}"></a>
+                        </div>
+                        <a href="https://www.nfse.gov.br/EmissorNacional/Login?ReturnUrl=%2fEmissorNacional%2fDPS%2fPessoas" target="_blank">Nota Fiscal</a>
+                    </div>
+                        
+                    <div class="item-group option">
+                        <div class="circle item">
+                            <a href="{% url 'add_orcamento' %}"><img src="{% static 'images/orcamento.png' %}"></a>
+                        </div>
+                        <a href="{% url 'add_orcamento' %}">Orçamento</a>
+                    </div>
+
+                    <div class="item-group option">
+                        <div class="circle item">
+                            <a href="{% url 'add_proposta' %}"><img src="{% static 'images/proposta.png' %}"></a>
+                        </div>
+                        <a href="{% url 'add_proposta' %}">Proposta de Contrato</a>
+                    </div>
+                </div>
+                    <p><a href="{% url 'add_outro' %}">Deseja outro tipo de documento?</a></p>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

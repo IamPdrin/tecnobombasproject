@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_styles %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+{% endblock %}
+
+{% block titulo %} Alteração de Equipamentos {% endblock %}
+
+{% block conteudo %}
+
+<main>
+    <div class="center-container">
+        <div class="container-card">
+            
+            <div class="body-card">
+                <h4>Alteração do Equipamento</h4>
+                <hr>
+
+                <form method="post">
+                    {% csrf_token %}
+
+                    <!-- Imagem do Equipamento -->
+                    <div class="image-container">
+                        <div class="circle">
+                            <button type="submit" class="btphoto" onclick="document.getElementById('foto_input').click()">
+                                <img src="{{ form.foto.url }}" alt="Imagem do Equipamento">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Nome do Equipamento -->
+                    <label for="nome">Nome:</label>
+                    <div class="input-group">
+                        <input type="text" id="nome" name="nome" value="{{ form.nome.value }}" required>
+                    </div>
+
+                    <!-- Categoria do Equipamento -->
+                    <label for="categoria">Categoria:</label>
+                    <div class="input-group">
+                        <input type="text" id="categoria" name="categoria" value="{{ form.categoria.value }}" required>
+                    </div>
+
+                    <!-- Especificação do Equipamento -->
+                    <label for="especificacao">Especificação:</label>
+                    <div class="input-group">
+                        <input type="text" id="especificacao" name="especificacao" value="{{ form.especificacoes.value }}" required>
+                    </div>
+
+                    <!-- Botão de envio -->
+                    <button type="submit" class="bt">Alterar</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

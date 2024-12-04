@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_styles %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+{% endblock %}
+
+{% block titulo %} Cadastro de Orçamento {% endblock %}
+
+{% block conteudo %}
+
+<main>
+    <div class="center-container">
+        <div class="container-card">
+
+            <div class="img-card">
+                <img src="{% static 'images/logo.png' %}" alt="Logo TecnoBombas">
+            </div>
+                <div class="body-card">
+                    <h2>Orçamento</h2>
+                    <hr>
+
+                    <form action="#" method="post">
+                        <label for="nome">Cliente:</label>
+                        <div class="input-group">
+                            <input type="text" id="nome" name="nome" placeholder="Nome">
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="endereco" name="endereco" placeholder="Meu Endereço">
+                        </div>
+                        
+                        <label for="service">Tipo de serviço:</label>
+                        <div class="input-group">
+                            <select id="service" name="service" required>
+                                <option value="service1">Opção 1</option>
+                                <option value="service2">Opção 2</option>
+                                <option value="service3">Opção 3</option>
+                            </select>
+                        </div>
+                    
+                        <label for="equipament">Peças:</label>
+                        <div class="input-group">
+                            <select id="equipament" name="equipament" required>
+                                <option value="equipament1">Opção 1</option>
+                                <option value="equipament2">Opção 2</option>
+                                <option value="equipament3">Opção 3</option>
+                            </select>
+                            <input type="number" id="qtd" name="qtd" placeholder="Qtd">
+                            <button type="button" class="btphoto deny">
+                                <img src="{% static 'images/trash.png' %}" alt="Excluir">
+                            </button>
+                        </div>
+                        <button type="submit" class="bt add">Adicionar</button>
+                    </form>
+                    
+                    <div class="input-group">
+                        <button type="submit" class="bt">Enviar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

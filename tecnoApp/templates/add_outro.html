@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_styles %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+{% endblock %}
+
+{% block titulo %} Cadastro de Documento Especial {% endblock %}
+
+{% block conteudo %}
+
+<main>
+    <div class="center-container">
+        <div class="container-card">  
+            <div class="body-card">
+                <h4>Documento Personalizado</h4>
+                <hr>
+
+                <form action="#" method="post">
+                    <div class="input-group">
+                        <textarea id="especificacao" name="especificacao" placeholder="Especificações:" rows="11" cols="34"></textarea>
+                    </div>
+                    <button type="submit" class="bt">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

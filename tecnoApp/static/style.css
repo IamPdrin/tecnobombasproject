@@ -1,0 +1,543 @@
+html, body { 
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: radial-gradient(circle, #111780, #000005);
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh; 
+}
+
+main {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.alert-success {
+    color: green;
+    background-color: #d4edda;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.alert-error {
+    color: red;
+    background-color: #f8d7da;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+form {
+    background-color: #191D61;
+    padding: 20px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+.container-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.container {
+    width: 90%;
+    flex-wrap:wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Centraliza verticalmente usando a altura total da viewport */
+}
+
+.container-cards-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+/*Para multiplos containers*/
+.container-cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 200;
+    max-height: 2009;
+    width: 450px;  /* O container ocupa toda a largura disponível */
+    
+    background-color: #191D61;
+    border-radius: 20px;
+    padding: 5px;
+}
+/*-------------------------------*/
+
+
+.circle {
+    width: 2000px; /* Tamanho do círculo */
+    height: 200px; /* Tamanho do círculo */
+    border-radius: 50%; /* Torna o contêiner circular */
+    overflow: hidden; /* Impede que a imagem saia do círculo */
+    border: 2px solid #ccc; /* Borda opcional para destacar o círculo */
+    display: flex;
+    justify-content: center; /* Centraliza a imagem dentro do círculo */
+    align-items: center; /* Alinha a imagem no centro */
+    flex-direction: column;
+    margin: 0 auto; /* Centraliza o círculo dentro do contêiner */
+    background-color: #e6e6e6;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    align-self: center;
+    cursor: pointer;
+}
+
+
+.circle img {
+    width: 35%;
+    margin-top: 31%;
+}
+
+.circle:hover {
+    filter: brightness(80%);
+}
+
+@media (max-width: 1000px) {
+    .container-cards {
+        padding: 4vw;
+        width: 85vw;    /* Garante que ocupe toda a largura da tela */
+        min-height: 600px;
+    }
+}
+
+.container-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 200;
+    width: 750px;  /* O container ocupa toda a largura disponível */
+    
+    background-color: #191D61;
+    border-radius: 20px;
+    padding: 35px;
+}
+
+@media (max-width: 1000px) {
+    .container-card {
+        padding: 4vw;
+        width: 85vw;    /* Garante que ocupe toda a largura da tela */
+        min-height: 600px;
+    }
+}
+.body-card a {
+    color: white;
+    text-decoration: underline;
+}
+
+.body-card a:hover {
+    color: white;
+}
+
+.body-card a:visited {
+    color: white;
+}
+
+hr {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaçamento entre o ícone e o campo de entrada */
+    margin-bottom: 20px; /* Espaçamento entre os grupos de entrada */
+    justify-content: center; /* Centraliza o conteúdo do input-group */
+    max-width: 500px; /* Ajuste a largura máxima se necessário */
+    margin-left: auto; /* Centraliza no eixo horizontal */
+    margin-right: auto; /* Centraliza no eixo horizontal */
+    font-family: 'Inter', sans-serif;
+}
+
+/* Alinha o input */
+.input-group input, select {
+    width: 100%; /* Faz o input ocupar toda a largura disponível */
+    max-width: 325px; /* Ajuste o valor para o tamanho desejado */
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    transition: border 0.3s;
+}
+
+.input-group textarea {
+    width: 100%; /* Faz o input ocupar toda a largura disponível */
+    max-width: 325px; /* Ajuste o valor para o tamanho desejado */
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    transition: border 0.3s;
+    resize: none;
+    overflow: auto;
+}
+
+/* Foco do input */
+.input-group input:focus {
+    border-color: #2196F3;
+    outline: none;
+}
+
+
+.input-group input[name="rua"] {
+    width: 50%;
+}
+
+
+.input-group input[name="Nrua"] {
+    width: 13%;
+}
+
+.input-group input[name="cidade"] {
+    width: 50%;
+}
+
+
+.input-group input[name="uf"] {
+    width: 13%;
+}
+
+.input-group input[name="qtd"] {
+    width: 13%;
+}
+
+.input-group hr {
+    background-color: white;
+    width: 75%;
+}
+
+.item-group {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Espaçamento entre o ícone e o campo de entrada */
+    margin-bottom: 20px; /* Espaçamento entre os grupos de entrada */
+    justify-content: center; /* Centraliza o conteúdo do input-group */
+    margin-left: auto; /* Centraliza no eixo horizontal */
+    margin-right: auto; /* Centraliza no eixo horizontal */
+    font-family: 'Inter', sans-serif;
+    flex-direction: auto;
+}
+
+.item-group.option {
+        flex-direction: column;
+}
+.circle.item {
+    width: 130px;
+    height: 130px;
+    background-color: #e6e6e6;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    align-self: center;
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    .item-group {
+        flex-direction: column; /* Muda para coluna */
+    }
+}
+
+.body-card hr {
+    background-color: white;
+    width: 75%;
+}
+
+.body-card label {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+}
+
+.bt-and-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.img-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.img-card-plan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.img-card-plan .icon {
+    width: 20px;
+    height: 15px;
+    margin-bottom: 4%;
+}
+
+.img-finish-icon {
+    width: 150px;
+    align-self: center;
+}
+
+.bt {
+    padding: 7px 30px;
+    background-color: #16529A;
+    color: white;
+    text-decoration: none;
+    border-color: transparent;
+    border-radius: 5px;
+    font-size: 1rem;
+    display: inline-block;
+
+    font-family: 'Inter', sans-serif;
+}
+
+.bt:hover {
+    box-shadow: 0 0 13px white;
+}
+
+.bt.add {
+    background-color: #149423;
+}
+
+.bt.remove {
+    background-color: #900707;
+}
+
+.btphoto {
+    padding: 3px 9px;
+    background-color: #16529A;
+    color: white;
+    text-decoration: none;
+    border-color: transparent;
+    border-radius: 9px;
+    font-size: 1rem;
+    display: inline-block;
+
+    font-family: 'Inter', sans-serif;
+}
+
+.btphoto.accept{
+    padding: 3px 9px;
+    background-color: #149423;
+    color: white;
+    text-decoration: none;
+    border-color: transparent;
+    border-radius: 9px;
+    font-size: 1rem;
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+}
+
+.btphoto.accept img {
+    width: 20px;
+}
+
+.btphoto.deny {
+    padding: 3px 9px;
+    background-color: #900707;
+    color: white;
+    text-decoration: none;
+    border-color: transparent;
+    border-radius: 9px;
+    font-size: 1rem;
+    display: inline-block;
+
+    font-family: 'Inter', sans-serif;
+}
+
+
+.btphoto:hover {
+    box-shadow: 0 0 13px white;
+}
+
+.body-card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+}
+
+body h1, h2, h4, p {
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+
+footer {
+    padding: 60px 0;
+    width: 100%;
+    margin-top: auto;
+    position: relative;
+    left: 0;
+    right: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer ul {
+    list-style: none;
+    display: grid;
+    gap: 20px;
+}
+
+footer p {
+    color: #000005;
+    font-weight: bolder;
+}
+
+footer h3 {
+    color: #373737;
+    margin-bottom: 70px;
+    font-weight: lighter;
+}
+
+footer .icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .icon-container i {
+    font-size: 24px;
+    margin:0 10px;
+}
+
+footer .items-footer {
+    display: flex;
+    gap: 70px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.footer .body-card a {
+    color: white;
+    text-decoration: underline;
+}
+
+.footer .body-card a:hover {
+    color: white;
+}
+
+.footer .body-card a:visited {
+    color: white;
+}
+
+/* Switch para alterar entre CNPJ E CPF*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent; /* Sem fundo */
+  border: 3px solid white; /* Borda branca */
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: 2px;
+  bottom: 4px;
+  top: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: transparent; /* Sem fundo */
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/*CHECKBOX*/
+.checkbox-container input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    border-radius: 4px; /* Borda arredondada */
+    background-color: transparent; /* Fundo transparente */
+    margin-right: 10px;
+    transition: background-color 0.3s, border-color 0.3s;
+}

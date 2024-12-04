@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styleLandingPage.css' %}">
+    {% block extra_styles %}{% endblock %}
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="shortcut icon" href="{% static 'images/TECNO.png'%}" type="image/x-icon">
+    <title>{% block titulo %}{% endblock %}</title>
+    </head>
+<body>
+    {% block conteudo %}
+    {% endblock %}
+
+    <!--Footer-->
+    <footer>
+        <div class="container">
+            <div>
+                <h3>TecnoBombas</h3>
+                    <div class="icon-container">
+                        <i><a href="#"><img src="{% static 'images/yt-icon.png' %}" alt="icone youtube"></a></i>
+                        <i><a href="#"><img src="{% static 'images/fb-icon.png' %}" alt="icone facebook"></a></i>
+                        <i><a href="#"><img src="{% static 'images/tktk-icon.png' %}" alt="icone tiktok"></a></i>
+                        <i><a href="https://www.instagram.com/tecno.bombas/" target="_blank"><img src="{% static 'images/insta-icon.png' %}" alt="icone instagram"></a></i>
+                    </div>
+            </div>
+
+            <div class="items-footer">
+                <ul>
+                    <li><p>Contato</p></li> 
+                    <li>tecnobombas@gmail.com</li> 
+                    <li>(13)99168-8270</li>
+                </ul>
+                
+                <ul>
+                    <li><p>Localização</p></li> 
+                    <li>Praia Grande, SP</li>
+                    <li><li>
+                </ul>
+            </div>
+
+        </div>
+    </footer>
+</body>
+</html>
